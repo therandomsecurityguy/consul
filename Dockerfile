@@ -11,7 +11,7 @@ ADD https://releases.hashicorp.com/consul/${VERSION}/consul_${VERSION}_SHA256SUM
 
 WORKDIR /tmp
 
-RUN apk --update add ca-certificates \
+RUN apk --update add curl bash ca-certificates \
   && cat consul_${VERSION}_SHA256SUMS | grep linux_amd64 | sha256sum -c \
   && unzip consul_${VERSION}_linux_amd64.zip \
   && mv consul /bin/ \
