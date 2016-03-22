@@ -3,7 +3,7 @@
 FROM alpine:latest
 MAINTAINER Derek Chamorro <therandomsecurityguy@gmail.com>
 
-ENV VERSION 0.6.3
+ENV VERSION 0.6.4
 
 ADD https://releases.hashicorp.com/consul/${VERSION}/consul_${VERSION}_linux_amd64.zip /tmp/
 ADD https://releases.hashicorp.com/consul/${VERSION}/consul_${VERSION}_SHA256SUMS      /tmp/
