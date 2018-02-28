@@ -16,10 +16,6 @@ RUN apk --update add curl bash ca-certificates \
   && unzip consul_${VERSION}_linux_amd64.zip \
   && mv consul /bin/ \
   && rm -rf consul_${VERSION}_linux_amd64.zip \
-  && curl -o ui.zip https://releases.hashicorp.com/consul/${VERSION}/consul_${VERSION}_web_ui.zip \
-  && unzip ui.zip \
-  && mkdir -p /ui \
-  && mv * /ui \
   && rm -rf /tmp/* /var/cache/apk/*
 
 
